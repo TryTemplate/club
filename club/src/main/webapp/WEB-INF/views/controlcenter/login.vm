@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>登录</title>
+<link href="/css/login/login.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+#parse("receptionframe/homebody.vm")
+
+	<div class="login">
+		<div class="message">protal - sign in</div>
+		<div id="darkbannerwrap"></div>
+
+		<form action="/login/resignin.htm" method="post" target="_top">
+			<input name="account" placeholder="账号" required="" type="text">
+			<hr class="hr15">
+			<input name="password" placeholder="密码" required="" type="password">
+			<hr class="hr15">
+			<input value="登录" style="width: 100%;" type="submit">
+			<hr class="hr20">
+		</form>
+		<a onClick="alert('请联系管理员')">忘记密码</a>
+
+	</div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+
+//获取登录对象中的信息
+var loginuserun = "$!user_session.userName";
+var loginuserac = "$!user_session.account";
+
+//如果对象不为空直接去首页
+if (loginuserun!="" && loginuserac!="") {
+	top.location.href="/home/homepage.htm";
+}
+
+</script>

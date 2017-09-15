@@ -1,0 +1,41 @@
+<html>
+<head>
+
+<style>
+
+/* 组件边距 */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* 网页背景 */
+html {
+	background-color: #FFF0F5;
+}
+
+.headhd {
+	height: 40px;
+	color: white;
+	background: #335767;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+.headbd {
+	height: 60px;
+	color: white;
+	background: #335767;
+	border-bottom: 1px solid #c0c0c0;
+}
+</style>
+
+
+</head>
+<body>
+
+	<div class="headhd">
+		<a href="/home/homepage.htm" target="_top">homepage logo</a>
+	</div>
+
+</body>
+</html>
