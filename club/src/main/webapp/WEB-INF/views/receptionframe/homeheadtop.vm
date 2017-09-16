@@ -1,0 +1,64 @@
+<html>
+<head>
+
+<link href="/css/head.css" type="text/css" rel="stylesheet">
+<link href="/css/a.css" type="text/css" rel="stylesheet">
+
+<style>
+
+/* 组件边距 */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* 网页背景 */
+html {
+	background-color: #FFF0F5;
+}
+
+.uspan {
+	color: #08c;
+}
+
+.uspan:hover {
+	color: #4169e1;
+	cursor: pointer;
+}
+
+.tudiv {
+	float: right;
+	width: 125px;
+	height: 40px;
+	line-height: 40px;
+}
+.tudiv:hover {
+	background-color: #424851;
+}
+
+</style>
+
+
+</head>
+<body>
+
+	<div class="headhd">
+		
+		<a href="/home/homepage.htm" target="_top" title="首页">
+			<img src="/images/home/logo.gif"" alt="" style="height: 35px;" />
+		</a>
+		
+		#if(! $user_session.account)
+			<div style="float: right;text-align: center;height: 40px;">
+				<a href="/login/gorelogin.htm" class="butstylea" style="float: right;" target="_top">登录</a>
+			</div>
+		#else
+			<div class="tudiv">
+				<span class="uspan">$!user_session.userName</span> <span style="color: #da70d6;">,你好</span>
+			</div>
+		#end
+		
+	</div>
+
+</body>
+</html>

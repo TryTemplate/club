@@ -6,6 +6,9 @@
 <meta http-equiv="Expires" content="0">
 
 <title>club</title>
+
+<link href="/css/head.css" type="text/css" rel="stylesheet">
+
 <style>
 
 /* 组件边距 */
@@ -39,20 +42,16 @@ html {
 
 </head>
 <body>
-#parse("receptionframe/homehead.vm")
+	#parse("receptionframe/homeallhead.vm")
 
 
-<center>
 
-	homepage login
-	<br>
-	<br>
-	aaaaa
-
-</center>
+	<font style="font-size: 36px;width: 100%;height:100%;text-align: center;">
+		context
+	</font>
 
 <div style="padding-bottom: 5px;">
-	<a href="#" style="padding-bottom: 0px;">balogin</a>
+	<a href="#" style="">balogin</a>
 </div>
 
 </body>

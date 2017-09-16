@@ -32,7 +32,7 @@ public class WelcomeController {
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="delsession.htm")
 	public String delssion(HttpServletRequest request, ModelMap map) {
 		request.getSession().invalidate();
-		return "/";
+		return "/receptionframe/homepage";
 	}
 	
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="ajaxtest.htm")

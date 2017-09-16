@@ -1,0 +1,11 @@
+<html>
+<head>
+
+</head>
+<body>
+
+#parse("receptionframe/homeheadtop.vm")
+#parse("receptionframe/homeheadbody.vm")
+
+</body>
+</html>
