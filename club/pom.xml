@@ -15,8 +15,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>3.1.2.RELEASE</spring.version>
-		<applylocation.version>1.0.0.0715.RELEASE</applylocation.version>
-		<mybatis.version>3.2.4</mybatis.version>
+		<applylocation.version>1.0.0.0715-SNAPSHOT</applylocation.version>
+		<mybatis.version>3.0.4</mybatis.version>
 	</properties>
 
 	<dependencies>
@@ -279,6 +279,27 @@
 	</dependencies>
 
 	<build>
-		<finalName>club</finalName>
+		<finalName>club-${applylocation.version}</finalName>
+		
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-war-plugin</artifactId>
+			  <version>2.3</version>
+			  <configuration>
+			   <warName>ROOT</warName>
+			  </configuration>
+			</plugin>
+		</plugins>
+
 	</build>
 </project>

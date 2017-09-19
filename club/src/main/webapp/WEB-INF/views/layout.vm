@@ -9,7 +9,7 @@
 #if($mainTitle)
 $!mainTitle
 #else
-protal
+eici Internet of Things
 #end
 </title>
 <link rel="icon" href="/images/home/lens_72px_1180356_easyicon.net.ico" type="image/x-icon" />

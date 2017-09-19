@@ -22,6 +22,15 @@
 	background-color: #383D44;
 }
 
+.mdiv {
+	//display: none;
+	display: block;
+	z-index: 999;
+	float: right;
+	width: 100%;
+	background-color: #383D44;
+}
+
 table tr{
 	text-align: center;
 }
@@ -63,6 +72,10 @@ table tr td:nth-child(2){
 			<tr><td colspan="2"><a href="/home/delsession.htm" class="butstylemenua" target="_top">init session</a></td></tr>
 			<tr><td colspan="2"><a href="/login/gorelogin.htm" class="butstylea" target="_top">登录</a></td></tr>
 		</table>
+	</div>
+	
+	<div id="mdiv" class="mdiv">
+		mList
 	</div>
 
 </body>
