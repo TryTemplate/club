@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-09-14 16:49:25
+Date: 2017-09-19 17:46:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -81,12 +81,14 @@ CREATE TABLE `hm_menu_submenu` (
   `admin_id` int(11) DEFAULT NULL COMMENT '操作人id',
   `admin_name` varchar(255) DEFAULT NULL COMMENT '操作人姓名',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='首页子菜单';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='首页子菜单';
 
 -- ----------------------------
 -- Records of hm_menu_submenu
 -- ----------------------------
 INSERT INTO `hm_menu_submenu` VALUES ('1', '谷歌', 'www.google.cn', '子菜单一', '2', '0', '1', '2017-09-12 17:49:01', '2017-09-12 17:52:47', '1', '0', null);
+INSERT INTO `hm_menu_submenu` VALUES ('2', '百度', 'https://www.baidu.com', '百度搜索', '1', '2', '1', '2017-09-19 17:03:06', '2017-09-19 17:06:02', '1', '0', null);
+INSERT INTO `hm_menu_submenu` VALUES ('3', 'Bing', 'http://cn.bing.com/', 'Bing中国', '1', '1', '1', '2017-09-19 17:05:48', '2017-09-19 17:05:52', '1', '0', null);
 
 -- ----------------------------
 -- Table structure for sys_authority
@@ -197,7 +199,7 @@ CREATE TABLE `sys_user_admin` (
 -- ----------------------------
 -- Records of sys_user_admin
 -- ----------------------------
-INSERT INTO `sys_user_admin` VALUES ('1', 'test', 0x59B7C2B2CC04D1C73DE9B238F0B9DD24, '1', '管理员', 'admin', '1', '1', 'D://pathavatar', '1', '1', '2017-07-17 12:04:58', '2017-09-12 15:03:25', '0', '前台测试账户');
+INSERT INTO `sys_user_admin` VALUES ('1', 'test', 0x59B7C2B2CC04D1C73DE9B238F0B9DD24, '1', '管理员', 'admin', '1', '1', 'G:\\\\其它资料\\素材\\测试保存\\avatar20170916153806751.jpg', '1', '1', '2017-07-17 12:04:58', '2017-09-16 15:41:48', '0', '前台测试账户');
 INSERT INTO `sys_user_admin` VALUES ('2', 'admin', 0x03E75D99CBC0896EAD8B9DEB8F1F8AF4, '2', '后台管理员', 'admin', '1', '2', 'D://pathavatar', '1', '1', '2017-09-12 15:01:56', '2017-09-12 15:02:09', '0', '超级管理员');
 
 -- ----------------------------

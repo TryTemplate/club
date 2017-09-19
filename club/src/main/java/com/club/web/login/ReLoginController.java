@@ -44,7 +44,7 @@ public class ReLoginController {
 			}
 			request.getSession().setAttribute(Constants.USER_SESSION, loginuser);
 			log.warn("login successful √");
-			return "receptionframe/homepage";
+			return "redirect:/home/homepage.htm";
 		}
 		
 		log.warn("logon failure ×");

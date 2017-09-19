@@ -22,13 +22,24 @@
 	background-color: #383D44;
 }
 
-.mdiv {
+.mdivblock {
 	//display: none;
 	display: block;
 	z-index: 999;
 	float: right;
 	width: 100%;
 	background-color: #383D44;
+}
+
+.mdivnone {
+	display: none;
+	//display: block;
+	z-index: 999;
+	float: right;
+	width: 100%;
+	float: inherit;
+	background-color: #383D44;
+	position: absolute;
 }
 
 table tr{
@@ -50,6 +61,10 @@ table tr td:nth-child(2){
 	<div class="headbd">
 		
 		<a href="javascript:void(0);" class="butstylemenua" target="_top">菜单</a>
+		
+		#foreach($!mm in $!mList)
+			<a href="$!mm.url" class="butstylemenua" onmouseover="showthisdivm($!mm.id);" onmouseout="nonethisdivm($!mm.id);" title="$!mm.remarks" target="_top">$!mm.title</a>
+		#end
 		
 		#if(! $user_session.account)
 			<div style="float: right;text-align: center;width: 150px;height: 60px;line-height: 60px;">
@@ -73,15 +88,32 @@ table tr td:nth-child(2){
 			<tr><td colspan="2"><a href="/login/gorelogin.htm" class="butstylea" target="_top">登录</a></td></tr>
 		</table>
 	</div>
-	
-	<div id="mdiv" class="mdiv">
-		mList
-	</div>
+
+	#foreach($!mm in $!mList)
+		<div id="mdiv$!mm.id" class="mdivnone" title="mdivblock$!mm.id" onmouseover="showthisdivm($!mm.id);" onmouseout="nonethisdivm($!mm.id);">
+			$!mm.title<br /><br />
+			#foreach($!ms in $!mm.smenuList)
+				<a href="$!ms.url" class="butstylemenua" title="$!ms.remarks" target="contiframe">$!ms.title</a>
+			#end
+		</div>
+	#end	
+
 
 </body>
 </html>
 
 <script type="text/javascript">
+
+	function showthisdivm(id){
+		$("#mdiv"+id).css("display","block");
+	}
+	function nonethisdivm(id){
+		$("#mdiv"+id).css("display","none");
+	}
+	
+	function noneudiv(){$("#udiv").css("display","none");}
+
+
 	var dsnonediv;
 	$("#uarv").on("mouseover",function(){
 		$("#udiv").css("display","block");
@@ -100,5 +132,6 @@ table tr td:nth-child(2){
 		$("#udiv").css("display","none");
 	});
 	
-	function noneudiv(){$("#udiv").css("display","none");}
+	
+	
 </script>

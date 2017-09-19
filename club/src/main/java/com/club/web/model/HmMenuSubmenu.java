@@ -13,7 +13,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 主键id
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private Integer id;
 
@@ -23,7 +23,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 菜单名称
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private String title;
 
@@ -33,7 +33,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 菜单目标路径
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private String url;
 
@@ -43,7 +43,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 备注
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private String remarks;
 
@@ -53,7 +53,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 子菜单外键id
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private Integer vOutId;
 
@@ -63,7 +63,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 排序
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private String sorting;
 
@@ -73,7 +73,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 状态 1.启用,0未启用
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private String status;
 
@@ -83,7 +83,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 创建时间
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private Date createTime;
 
@@ -93,7 +93,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 更新时间
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private Date updateTime;
 
@@ -103,7 +103,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 是否删除 1.正常,0.删除
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private String isDelete;
 
@@ -113,7 +113,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 操作人id
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private Integer adminId;
 
@@ -123,7 +123,7 @@ public class HmMenuSubmenu {
      *
      * @FieldComment 操作人姓名
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     private String adminName;
 
@@ -135,7 +135,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.id
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public Integer getId() {
         return id;
@@ -149,7 +149,7 @@ public class HmMenuSubmenu {
      *
      * @param id the value for hm_menu_submenu.id
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setId(Integer id) {
         this.id = id;
@@ -163,7 +163,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.title
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public String getTitle() {
         return title;
@@ -177,7 +177,7 @@ public class HmMenuSubmenu {
      *
      * @param title the value for hm_menu_submenu.title
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setTitle(String title) {
         this.title = title == null ? null : title.trim();
@@ -191,7 +191,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.url
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public String getUrl() {
         return url;
@@ -205,7 +205,7 @@ public class HmMenuSubmenu {
      *
      * @param url the value for hm_menu_submenu.url
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setUrl(String url) {
         this.url = url == null ? null : url.trim();
@@ -219,7 +219,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.remarks
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public String getRemarks() {
         return remarks;
@@ -233,7 +233,7 @@ public class HmMenuSubmenu {
      *
      * @param remarks the value for hm_menu_submenu.remarks
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setRemarks(String remarks) {
         this.remarks = remarks == null ? null : remarks.trim();
@@ -247,7 +247,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.v_out_id
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public Integer getvOutId() {
         return vOutId;
@@ -261,7 +261,7 @@ public class HmMenuSubmenu {
      *
      * @param vOutId the value for hm_menu_submenu.v_out_id
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setvOutId(Integer vOutId) {
         this.vOutId = vOutId;
@@ -275,7 +275,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.sorting
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public String getSorting() {
         return sorting;
@@ -289,7 +289,7 @@ public class HmMenuSubmenu {
      *
      * @param sorting the value for hm_menu_submenu.sorting
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setSorting(String sorting) {
         this.sorting = sorting == null ? null : sorting.trim();
@@ -303,7 +303,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.status
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public String getStatus() {
         return status;
@@ -317,7 +317,7 @@ public class HmMenuSubmenu {
      *
      * @param status the value for hm_menu_submenu.status
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setStatus(String status) {
         this.status = status == null ? null : status.trim();
@@ -331,7 +331,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.create_time
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public Date getCreateTime() {
         return createTime;
@@ -345,7 +345,7 @@ public class HmMenuSubmenu {
      *
      * @param createTime the value for hm_menu_submenu.create_time
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
@@ -359,7 +359,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.update_time
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public Date getUpdateTime() {
         return updateTime;
@@ -373,7 +373,7 @@ public class HmMenuSubmenu {
      *
      * @param updateTime the value for hm_menu_submenu.update_time
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
@@ -387,7 +387,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.is_delete
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public String getIsDelete() {
         return isDelete;
@@ -401,7 +401,7 @@ public class HmMenuSubmenu {
      *
      * @param isDelete the value for hm_menu_submenu.is_delete
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setIsDelete(String isDelete) {
         this.isDelete = isDelete == null ? null : isDelete.trim();
@@ -415,7 +415,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.admin_id
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public Integer getAdminId() {
         return adminId;
@@ -429,7 +429,7 @@ public class HmMenuSubmenu {
      *
      * @param adminId the value for hm_menu_submenu.admin_id
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setAdminId(Integer adminId) {
         this.adminId = adminId;
@@ -443,7 +443,7 @@ public class HmMenuSubmenu {
      *
      * @return the value of hm_menu_submenu.admin_name
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public String getAdminName() {
         return adminName;
@@ -457,7 +457,7 @@ public class HmMenuSubmenu {
      *
      * @param adminName the value for hm_menu_submenu.admin_name
      *
-     * @mbggenerated Wed Aug 09 10:05:14 CST 2017
+     * @mbggenerated Mon Sep 18 10:55:56 CST 2017
      */
     public void setAdminName(String adminName) {
         this.adminName = adminName == null ? null : adminName.trim();

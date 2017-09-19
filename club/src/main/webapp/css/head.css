@@ -1,16 +1,19 @@
 
 .headhd {
+	width: 100%;
 	height: 40px;
 	color: white;
 	background: #383D44;
 	border-bottom: 1px solid #424851;
 	vertical-align: middle;
+	display: inline-table;
 }
 
 
 .headbd {
+	width: 100%;
 	height: 60px;
 	color: white;
 	background: #383D44;
-	border-bottom: 1px solid #424851;
+	display: inline-table;
 }
