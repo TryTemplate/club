@@ -72,7 +72,7 @@ table tr td:nth-child(2){
 			</div>
 		#else
 			<div id="uarv" style="float: right;text-align: center;height: 60px;line-height: 60px;">
-				<img alt="" title="$!user_session.userName" src="http://download.easyicon.net/png/1578/128/" style="width: 40px;height: 40px;">
+				<img alt="" title="$!user_session.userName" src="http://image.baidu.com/search/down?tn=download&ipn=dwnl&word=download&ie=utf8&fr=result&url=http%3A%2F%2Fwww.icosky.com%2Ficon%2Fpng%2FSystem%2FFast%2520Icon%2520Users%2FUser.png&thumburl=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D563704626%2C2963354397%26fm%3D27%26gp%3D0.jpg" style="width: 40px;height: 40px;">
 			</div>
 		#end
 		
