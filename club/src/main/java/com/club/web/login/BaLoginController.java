@@ -30,7 +30,7 @@ public class BaLoginController {
 		}
 		 */
 		
-		return "baceptionframe/homepage";
+		return "baceptionframe/bahomepage";
 	}
 	
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="basignin.do")

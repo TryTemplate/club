@@ -26,15 +26,7 @@ public class Constants {
 
 	public static final String PARAMS = "params";
 	
-	public static String version;
+	public static final String version = "version";
 	
-	public static String loginmsg;
-
-	public void setVersion(String version) {
-		this.version = version;
-	}
-	
-	public void setLoginmsg(String loginmsg) {
-		this.loginmsg = loginmsg;
-	}
+	public static final String loginmsg = "loginmsg";
 }
