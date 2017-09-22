@@ -188,4 +188,25 @@ public interface SysUserAdminMapper {
         @Result(column="password", property="password", jdbcType=JdbcType.VARCHAR)
     })
     SysUserAdmin getUserAdminByAP(SysUserAdmin admin);
+    
+    
+    @SelectProvider(type=SysUserAdminSqlProvider.class, method="getAdminByAP")
+    @Results({
+    	@Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
+    	@Result(column="account", property="account", jdbcType=JdbcType.VARCHAR),
+    	@Result(column="user_id", property="userId", jdbcType=JdbcType.INTEGER),
+    	@Result(column="user_name", property="userName", jdbcType=JdbcType.VARCHAR),
+    	@Result(column="user_real_name", property="userRealName", jdbcType=JdbcType.VARCHAR),
+    	@Result(column="sex", property="sex", jdbcType=JdbcType.VARCHAR),
+    	@Result(column="customer_type", property="customerType", jdbcType=JdbcType.VARCHAR),
+    	@Result(column="avatar_path", property="avatarPath", jdbcType=JdbcType.VARCHAR),
+    	@Result(column="status", property="status", jdbcType=JdbcType.VARCHAR),
+    	@Result(column="is_delete", property="isDelete", jdbcType=JdbcType.VARCHAR),
+    	@Result(column="create_time", property="createTime", jdbcType=JdbcType.TIMESTAMP),
+    	@Result(column="update_time", property="updateTime", jdbcType=JdbcType.TIMESTAMP),
+    	@Result(column="admin_id", property="adminId", jdbcType=JdbcType.INTEGER),
+    	@Result(column="admin_name", property="adminName", jdbcType=JdbcType.VARCHAR),
+    	@Result(column="password", property="password", jdbcType=JdbcType.VARCHAR)
+    })
+    SysUserAdmin getAdminByAP(SysUserAdmin admin);
 }

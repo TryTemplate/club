@@ -10,4 +10,5 @@ public interface SysUserAdminService {
 	
 	public SysUserAdmin getUserAdminByAP(SysUserAdmin admin);
 	
+	public SysUserAdmin getAdminByAP(SysUserAdmin admin);
 }

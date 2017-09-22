@@ -1,12 +1,8 @@
 package com.club.web.login;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
-import org.apache.velocity.tools.config.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -18,7 +14,7 @@ import com.club.web.service.SysUserAdminService;
 import com.club.web.util.Constants;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/balogin")
 public class BaLoginController {
 	private final static Logger log = Logger.getLogger(BaLoginController.class);
 
@@ -26,32 +22,35 @@ public class BaLoginController {
 	private SysUserAdminService sysUserAdminService;
 	
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="gobalogin.do")
-	public String gologin(HttpServletRequest request, ModelMap map,SysUserAdmin admin) {
-		SysUserAdmin admin_session = (SysUserAdmin) request.getSession().getAttribute(Constants.USER_SESSION);
+	public String gobalogin(HttpServletRequest request, ModelMap map) {
+		/**
+		SysUserAdmin admin_session = (SysUserAdmin) request.getSession().getAttribute(Constants.ADMIN_SESSION);
 		if (admin_session==null) {
-			return "controlcenter/login";
+			return "bacontrolcenter/balogin";
 		}
-		return "receptionframe/homepage";
+		 */
+		
+		return "baceptionframe/homepage";
 	}
 	
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="basignin.do")
-	public String indexPage(HttpServletRequest request, ModelMap map,SysUserAdmin admin) {
+	public String baindexPage(HttpServletRequest request, ModelMap map,SysUserAdmin admin) {
 		
-		SysUserAdmin loginuser = sysUserAdminService.getUserAdminByAP(admin);
+		SysUserAdmin loginuser = sysUserAdminService.getAdminByAP(admin);
 		
 		if (loginuser != null) {
 			if (loginuser.getStatus().equals('0')) {
-				map.put(Constants.loginmsg, "您的账号已停用,如有疑问请联系管理员");	
-				return "controlcenter/login";
+				map.put(Constants.loginmsg, "您的账号已停用,如有疑问请联系管理员");
+				return "bacontrolcenter/login";
 			}
-			request.getSession().setAttribute(Constants.USER_SESSION, loginuser);
+			request.getSession().setAttribute(Constants.ADMIN_SESSION, loginuser);
 			log.warn("login successful √");
-			return "receptionframe/homepage";
+			return "baceptionframe/bahomepage";
 		}
 		
 		log.warn("logon failure ×");
 		map.put(Constants.loginmsg, "用户名或密码错误");
-		return "controlcenter/login";
+		return "bacontrolcenter/balogin";
 	}
 	
 

@@ -12,20 +12,27 @@ public class SysUserAdminServiceImpl implements SysUserAdminService {
 	@Autowired
 	private SysUserAdminMapper sysUserAdminMapper;
 	
+	@Override
 	public void addUserAdmin(SysUserAdmin admin) {
 		// TODO Auto-generated method stub
 	}
 
+	@Override
 	public void updateUserAdmin(SysUserAdmin admin) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	@Override
 	public SysUserAdmin getUserAdminByAP(SysUserAdmin admin) {
 		// TODO Auto-generated method stub
-		
 		return sysUserAdminMapper.getUserAdminByAP(admin);
-		
+	}
+
+	@Override
+	public SysUserAdmin getAdminByAP(SysUserAdmin admin) {
+		// TODO Auto-generated method stub
+		return sysUserAdminMapper.getAdminByAP(admin);
 	}
 
 

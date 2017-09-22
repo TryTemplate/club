@@ -174,4 +174,22 @@ public class SysUserAdminSqlProvider {
     	
     	return sb.toString();
 	}
+    
+    public String getAdminByAP(SysUserAdmin admin) {
+    	// TODO Auto-generated method stub
+    	
+    	StringBuffer sb = new StringBuffer("select * from sys_user_admin where customer_type='2'");
+    	
+    	if (StringUtils.isNotBlank(admin.getAccount())) {
+    		sb.append(" and account=#{account,jdbcType=VARCHAR}");
+    	}
+    	
+    	if (StringUtils.isNotBlank(admin.getPassword())) {
+    		sb.append(" and AES_DECRYPT(password,'eici')=#{password,jdbcType=VARCHAR}");
+    	}
+    	
+    	sb.append(" and is_delete = '1'");
+    	
+    	return sb.toString();
+    }
 }

@@ -22,7 +22,7 @@ public class ReLoginController {
 	private SysUserAdminService sysUserAdminService;
 	
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="gorelogin.htm")
-	public String gologin(HttpServletRequest request, ModelMap map,SysUserAdmin admin) {
+	public String gologin(HttpServletRequest request, ModelMap map) {
 		/**
 		SysUserAdmin admin_session = (SysUserAdmin) request.getSession().getAttribute(Constants.USER_SESSION);
 		if (admin_session==null) {

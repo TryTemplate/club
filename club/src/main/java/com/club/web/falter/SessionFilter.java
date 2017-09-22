@@ -16,8 +16,8 @@ import com.club.web.util.Constants;
 public class SessionFilter extends OncePerRequestFilter {
 
 	private final static Logger LOG = LoggerFactory.getLogger(SessionFilter.class);
-	private static final String LOGIN_PAGE = "/login/gobalogin.do";
-	String[] notFilter = new String[] { "/login/basignin.do", "/test/baindex.do" ,LOGIN_PAGE};
+	private static final String LOGIN_PAGE = "/balogin/gobalogin.do";
+	String[] notFilter = new String[] { "/balogin/basignin.do", "/test/baindex.do" ,LOGIN_PAGE};
 
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
@@ -34,7 +34,7 @@ public class SessionFilter extends OncePerRequestFilter {
 		
 		try {
 			if (doFilter) {
-				Object obj = request.getSession().getAttribute(Constants.USER_SESSION);
+				Object obj = request.getSession().getAttribute(Constants.ADMIN_SESSION);
 				if (null == obj) {
 					response.sendRedirect(LOGIN_PAGE);
 				} else {
