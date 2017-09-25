@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.club.web.model.SysUserAdmin;
 import com.club.web.service.SysUserAdminService;
 import com.club.web.util.Constants;
+import com.club.web.util.StringUtils;
 
 @Controller
 @RequestMapping("/login")
@@ -22,34 +23,37 @@ public class ReLoginController {
 	private SysUserAdminService sysUserAdminService;
 	
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="gorelogin.htm")
-	public String gologin(HttpServletRequest request, ModelMap map) {
+	public String gologin(HttpServletRequest request, ModelMap map,String loginmsg) {
 		/**
 		SysUserAdmin admin_session = (SysUserAdmin) request.getSession().getAttribute(Constants.USER_SESSION);
 		if (admin_session==null) {
 			return "controlcenter/login";
 		}
 		*/
+		if (loginmsg!=null) {
+			map.put(Constants.loginmsg, loginmsg);
+		}
 		return "controlcenter/login";
 	}
-	
-	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="resignin.htm")
-	public String indexPage(HttpServletRequest request, ModelMap map,SysUserAdmin admin) {
-		
+
+	@RequestMapping(method = { RequestMethod.GET, RequestMethod.POST }, value = "resignin.htm")
+	public String indexPage(HttpServletRequest request, ModelMap map, SysUserAdmin admin) {
+
 		SysUserAdmin loginuser = sysUserAdminService.getUserAdminByAP(admin);
-		
+
 		if (loginuser != null) {
 			if (loginuser.getStatus().equals('0')) {
-				map.put(Constants.loginmsg, "您的账号已停用,如有疑问请联系管理员");	
-				return "controlcenter/login";
+				map.put(Constants.loginmsg, "您的账号已停用,如有疑问请联系管理员");
+				return "redirect:/login/gorelogin.htm";
 			}
 			request.getSession().setAttribute(Constants.USER_SESSION, loginuser);
 			log.warn("login successful √");
 			return "redirect:/home/homepage.htm";
 		}
-		
+
 		log.warn("logon failure ×");
 		map.put(Constants.loginmsg, "用户名或密码错误");
-		return "controlcenter/login";
+		return "redirect:/login/gorelogin.htm";
 	}
 	
 

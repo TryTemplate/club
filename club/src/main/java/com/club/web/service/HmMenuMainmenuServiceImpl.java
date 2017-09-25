@@ -15,8 +15,8 @@ public class HmMenuMainmenuServiceImpl implements HmMenuMainmenuService {
 	private HmMenuMainmenuMapper hmMenuMainmenuMapper;
 
 	@Override
-	public List<HmMenuMainmenu> getMainMenu(){
-		return hmMenuMainmenuMapper.selectHomeViewMenu();
+	public List<HmMenuMainmenu> getMainMenu(int type){
+		return hmMenuMainmenuMapper.selectHomeViewMenu(type);
 	}
 
 }

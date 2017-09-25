@@ -48,6 +48,14 @@ public class HmMenuMainmenuSqlProvider {
             VALUES("status", "#{status,jdbcType=VARCHAR}");
         }
         
+        if (record.getType() != null) {
+            VALUES("type", "#{type,jdbcType=INTEGER}");
+        }
+        
+        if (record.getMenuIcon() != null) {
+            VALUES("menu_icon", "#{menuIcon,jdbcType=VARCHAR}");
+        }
+        
         if (record.getCreateTime() != null) {
             VALUES("create_time", "#{createTime,jdbcType=TIMESTAMP}");
         }
@@ -105,6 +113,14 @@ public class HmMenuMainmenuSqlProvider {
         
         if (record.getStatus() != null) {
             SET("status = #{status,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getType() != null) {
+            SET("type = #{type,jdbcType=INTEGER}");
+        }
+        
+        if (record.getMenuIcon() != null) {
+            SET("menu_icon = #{menuIcon,jdbcType=VARCHAR}");
         }
         
         if (record.getCreateTime() != null) {

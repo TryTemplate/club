@@ -12,28 +12,28 @@
 
 	<!-- bean definitions here -->
 	<context:component-scan base-package="com.club" />
-	
 	<!-- 
-	<bean id="constants" class="com.club.web.util.Constants">
-		<property name="loginmsg"><value>${loginmsg}</value></property>
-		<property name="version"><value>${version}</value></property>
-	</bean>
 	 -->
 
 	<!-- 配置读取外部配置文件 -->
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="location" value="classpath:jdbc.properties">
-			<!-- 
+		<property name="locations">
 			<list>
 				<value>classpath:jdbc.properties</value>
 				<value>classpath:configure.properties</value>
 				<value>classpath:memcached.properties</value>
 			</list> 
+			<!-- 
 			 -->
 		</property>
 	</bean>
 
+	<bean id="constants" class="com.club.web.util.Constants">
+		<property name="loginmsg"><value>${loginmsg}</value></property>
+		<property name="version"><value>${version}</value></property>
+	</bean>
+	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="${jdbc.driver}" />

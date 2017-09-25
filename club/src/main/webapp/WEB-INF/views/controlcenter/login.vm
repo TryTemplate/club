@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,19 +15,20 @@
 #parse("receptionframe/homeloginhead.vm")
 
 	<div class="login">
-		<div class="message">protal - sign in</div>
+		<div class="message">club - sign in</div>
 		<div id="darkbannerwrap"></div>
+		
+		<span style="color: red;position: absolute;margin-top: -25px;">$!loginmsg</span>
 
-		<form action="/login/resignin.htm" method="post" target="_top">
-			<input name="account" placeholder="账号" required="" type="text">
+		<form action="/login/resignin.htm" method="post">
+			<input name="account" placeholder="账号" required=""  type="text">
 			<hr class="hr15">
 			<input name="password" placeholder="密码" required="" type="password">
 			<hr class="hr15">
 			<input value="登录" style="width: 100%;" type="submit">
-			<hr class="hr20">
 		</form>
+		<br />
 		<a onClick="alert('请联系管理员')">忘记密码</a>
-
 	</div>
 	
 	

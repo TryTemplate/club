@@ -15,9 +15,9 @@ public class HmMenuSubmenuServiceImpl implements HmMenuSubmenuService {
 	private HmMenuSubmenuMapper hmMenuSubmenuMapper;
 
 	@Override
-	public List<HmMenuSubmenu> getSmenuByMid(Integer mid) {
+	public List<HmMenuSubmenu> getSmenuByMid(Integer mid, Integer type) {
 		// TODO Auto-generated method stub
-		return hmMenuSubmenuMapper.getSmenuByMid(mid);
+		return hmMenuSubmenuMapper.getSmenuByMid(mid,type);
 	}
 
 }

@@ -17,7 +17,7 @@ public class SessionFilter extends OncePerRequestFilter {
 
 	private final static Logger LOG = LoggerFactory.getLogger(SessionFilter.class);
 	private static final String LOGIN_PAGE = "/balogin/gobalogin.do";
-	String[] notFilter = new String[] { "/balogin/basignin.do", "/test/baindex.do" ,LOGIN_PAGE};
+	String[] notFilter = new String[] { "/balogin/basignin.do", "/mangerment/baindex.do" ,LOGIN_PAGE};
 
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)

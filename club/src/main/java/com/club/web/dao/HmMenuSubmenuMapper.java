@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
@@ -42,15 +43,15 @@ public interface HmMenuSubmenuMapper {
         "insert into hm_menu_submenu (title, url, ",
         "remarks, v_out_id, ",
         "sorting, status, ",
-        "create_time, update_time, ",
-        "is_delete, admin_id, ",
-        "admin_name)",
+        "type, create_time, ",
+        "update_time, is_delete, ",
+        "admin_id, admin_name)",
         "values (#{title,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, ",
         "#{remarks,jdbcType=VARCHAR}, #{vOutId,jdbcType=INTEGER}, ",
         "#{sorting,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, ",
-        "#{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, ",
-        "#{isDelete,jdbcType=VARCHAR}, #{adminId,jdbcType=INTEGER}, ",
-        "#{adminName,jdbcType=VARCHAR})"
+        "#{type,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, ",
+        "#{updateTime,jdbcType=TIMESTAMP}, #{isDelete,jdbcType=VARCHAR}, ",
+        "#{adminId,jdbcType=INTEGER}, #{adminName,jdbcType=VARCHAR})"
     })
     @SelectKey(statement="SELECT LAST_INSERT_ID()", keyProperty="id", before=false, resultType=Integer.class)
     int insert(HmMenuSubmenu record);
@@ -77,7 +78,7 @@ public interface HmMenuSubmenuMapper {
      */
     @Select({
         "select",
-        "id, title, url, remarks, v_out_id, sorting, status, create_time, update_time, ",
+        "id, title, url, remarks, v_out_id, sorting, status, type, create_time, update_time, ",
         "is_delete, admin_id, admin_name",
         "from hm_menu_submenu",
         "where id = #{id,jdbcType=INTEGER}"
@@ -90,6 +91,7 @@ public interface HmMenuSubmenuMapper {
         @Result(column="v_out_id", property="vOutId", jdbcType=JdbcType.INTEGER),
         @Result(column="sorting", property="sorting", jdbcType=JdbcType.VARCHAR),
         @Result(column="status", property="status", jdbcType=JdbcType.VARCHAR),
+        @Result(column="type", property="type", jdbcType=JdbcType.INTEGER),
         @Result(column="create_time", property="createTime", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="update_time", property="updateTime", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="is_delete", property="isDelete", jdbcType=JdbcType.VARCHAR),
@@ -125,6 +127,7 @@ public interface HmMenuSubmenuMapper {
           "v_out_id = #{vOutId,jdbcType=INTEGER},",
           "sorting = #{sorting,jdbcType=VARCHAR},",
           "status = #{status,jdbcType=VARCHAR},",
+          "type = #{type,jdbcType=INTEGER},",
           "create_time = #{createTime,jdbcType=TIMESTAMP},",
           "update_time = #{updateTime,jdbcType=TIMESTAMP},",
           "is_delete = #{isDelete,jdbcType=VARCHAR},",
@@ -135,7 +138,7 @@ public interface HmMenuSubmenuMapper {
     int updateByPrimaryKey(HmMenuSubmenu record);
     
     
-    @Select({"select id,title,url,remarks,sorting from hm_menu_submenu where is_delete=1 and status=1 and v_out_id= #{mid,jdbcType=INTEGER} order by sorting"})
+    @Select({"select id,title,url,remarks,sorting from hm_menu_submenu where is_delete=1 and status=1 and v_out_id= #{mid,jdbcType=INTEGER} and type = #{type,jdbcType=INTEGER} order by sorting"})
     @Results({
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
         @Result(column="title", property="title", jdbcType=JdbcType.VARCHAR),
@@ -144,11 +147,12 @@ public interface HmMenuSubmenuMapper {
         @Result(column="v_out_id", property="vOutId", jdbcType=JdbcType.INTEGER),
         @Result(column="sorting", property="sorting", jdbcType=JdbcType.VARCHAR),
         @Result(column="status", property="status", jdbcType=JdbcType.VARCHAR),
+        @Result(column="type", property="type", jdbcType=JdbcType.INTEGER),
         @Result(column="create_time", property="createTime", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="update_time", property="updateTime", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="is_delete", property="isDelete", jdbcType=JdbcType.VARCHAR),
         @Result(column="admin_id", property="adminId", jdbcType=JdbcType.INTEGER),
         @Result(column="admin_name", property="adminName", jdbcType=JdbcType.VARCHAR)
     })
-	List<HmMenuSubmenu> getSmenuByMid(Integer mid);
+	List<HmMenuSubmenu> getSmenuByMid(@Param("mid")Integer mid, @Param("type")Integer type);
 }

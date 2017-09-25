@@ -48,6 +48,10 @@ public class HmMenuSubmenuSqlProvider {
             VALUES("status", "#{status,jdbcType=VARCHAR}");
         }
         
+        if (record.getType() != null) {
+            VALUES("type", "#{type,jdbcType=INTEGER}");
+        }
+        
         if (record.getCreateTime() != null) {
             VALUES("create_time", "#{createTime,jdbcType=TIMESTAMP}");
         }
@@ -105,6 +109,10 @@ public class HmMenuSubmenuSqlProvider {
         
         if (record.getStatus() != null) {
             SET("status = #{status,jdbcType=VARCHAR}");
+        }
+        
+        if (record.getType() != null) {
+            SET("type = #{type,jdbcType=INTEGER}");
         }
         
         if (record.getCreateTime() != null) {

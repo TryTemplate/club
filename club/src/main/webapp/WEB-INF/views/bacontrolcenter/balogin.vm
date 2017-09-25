@@ -33,23 +33,26 @@
 	<div class="message warning">
 		<div class="inset">
 			<div class="login-head">
-				<h1>Login Form</h1>
+				<h1>Login Club Management Of Backstage System</h1>
 				<!-- <div class="alert-close"></div> -->
 			</div>
-			<form action="/balogin/basignin.do" method="post">
+			<form action="/balogin/basignin.do" method="post" target="_top">
+		
+				<span style="color: red;position: absolute;margin-top: -25px;margin-left: -205px;">$!loginmsg</span>
+			
 				<li>
-					<input type="text" name="account" class="text"><a href="JavaScript:void(0);" class="icon user"></a>
+					<input type="text" name="account" required="" class="text">
 				</li>
 					<div class="clear"> </div>
 				<li>
-					<input type="password" name="password" ><a href="JavaScript:void(0);" class="icon lock"></a>
+					<input type="password" required="" name="password" >
 				</li>
 				<div class="clear"></div>
 				<div class="submit">
 					<input type="submit" onclick="myFunction();" value="Sign in">
-					<h4>
+					<div style="height: 50px;line-height: 50px;">
 						<a href="JavaScript:void(0);" title="找回密码">Lost your Password ?</a>
-					</h4>
+					</div>
 					<div class="clear"></div>
 				</div>
 

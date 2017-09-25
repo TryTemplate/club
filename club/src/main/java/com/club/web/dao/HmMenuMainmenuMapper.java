@@ -42,12 +42,14 @@ public interface HmMenuMainmenuMapper {
         "insert into hm_menu_mainmenu (title, url, ",
         "remarks, v_out_id, ",
         "sorting, status, ",
+        "type, menu_icon, ",
         "create_time, update_time, ",
         "is_delete, admin_id, ",
         "admin_name)",
         "values (#{title,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, ",
         "#{remarks,jdbcType=VARCHAR}, #{vOutId,jdbcType=INTEGER}, ",
         "#{sorting,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, ",
+        "#{type,jdbcType=INTEGER}, #{menuIcon,jdbcType=VARCHAR}, ",
         "#{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, ",
         "#{isDelete,jdbcType=VARCHAR}, #{adminId,jdbcType=INTEGER}, ",
         "#{adminName,jdbcType=VARCHAR})"
@@ -77,7 +79,7 @@ public interface HmMenuMainmenuMapper {
      */
     @Select({
         "select",
-        "id, title, url, remarks, v_out_id, sorting, status, create_time, update_time, ",
+        "id, title, url, remarks, v_out_id, sorting, status, type, menu_icon, create_time, ",
         "is_delete, admin_id, admin_name",
         "from hm_menu_mainmenu",
         "where id = #{id,jdbcType=INTEGER}"
@@ -90,6 +92,8 @@ public interface HmMenuMainmenuMapper {
         @Result(column="v_out_id", property="vOutId", jdbcType=JdbcType.INTEGER),
         @Result(column="sorting", property="sorting", jdbcType=JdbcType.VARCHAR),
         @Result(column="status", property="status", jdbcType=JdbcType.VARCHAR),
+        @Result(column="type", property="type", jdbcType=JdbcType.INTEGER),
+        @Result(column="menu_icon", property="menuIcon", jdbcType=JdbcType.VARCHAR),
         @Result(column="create_time", property="createTime", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="update_time", property="updateTime", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="is_delete", property="isDelete", jdbcType=JdbcType.VARCHAR),
@@ -125,6 +129,8 @@ public interface HmMenuMainmenuMapper {
           "v_out_id = #{vOutId,jdbcType=INTEGER},",
           "sorting = #{sorting,jdbcType=VARCHAR},",
           "status = #{status,jdbcType=VARCHAR},",
+          "type = #{type,jdbcType=INTEGER},",
+          "menu_icon = #{menuIcon,jdbcType=VARCHAR},",
           "create_time = #{createTime,jdbcType=TIMESTAMP},",
           "update_time = #{updateTime,jdbcType=TIMESTAMP},",
           "is_delete = #{isDelete,jdbcType=VARCHAR},",
@@ -135,7 +141,7 @@ public interface HmMenuMainmenuMapper {
     int updateByPrimaryKey(HmMenuMainmenu record);
     
     
-    @Select({"select id,title,url,remarks,sorting from hm_menu_mainmenu where is_delete=1 and status=1 order by sorting"})
+    @Select({"select id,title,url,remarks,sorting,menu_icon from hm_menu_mainmenu where is_delete=1 and status=1 and type = #{type,jdbcType=INTEGER} order by sorting"})
     @Results({
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
         @Result(column="title", property="title", jdbcType=JdbcType.VARCHAR),
@@ -144,11 +150,13 @@ public interface HmMenuMainmenuMapper {
         @Result(column="v_out_id", property="vOutId", jdbcType=JdbcType.INTEGER),
         @Result(column="sorting", property="sorting", jdbcType=JdbcType.VARCHAR),
         @Result(column="status", property="status", jdbcType=JdbcType.VARCHAR),
+        @Result(column="type", property="type", jdbcType=JdbcType.INTEGER),
+        @Result(column="menu_icon", property="menuIcon", jdbcType=JdbcType.VARCHAR),
         @Result(column="create_time", property="createTime", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="update_time", property="updateTime", jdbcType=JdbcType.TIMESTAMP),
         @Result(column="is_delete", property="isDelete", jdbcType=JdbcType.VARCHAR),
         @Result(column="admin_id", property="adminId", jdbcType=JdbcType.INTEGER),
         @Result(column="admin_name", property="adminName", jdbcType=JdbcType.VARCHAR)
     })
-    List<HmMenuMainmenu> selectHomeViewMenu();
+    List<HmMenuMainmenu> selectHomeViewMenu(int type);
 }

@@ -22,15 +22,18 @@ public class BaLoginController {
 	private SysUserAdminService sysUserAdminService;
 	
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="gobalogin.do")
-	public String gobalogin(HttpServletRequest request, ModelMap map) {
+	public String gobalogin(HttpServletRequest request, ModelMap map,String loginmsg) {
 		/**
 		SysUserAdmin admin_session = (SysUserAdmin) request.getSession().getAttribute(Constants.ADMIN_SESSION);
 		if (admin_session==null) {
 			return "bacontrolcenter/balogin";
 		}
 		 */
-		
-		return "baceptionframe/bahomepage";
+
+		if (loginmsg!=null) {
+			map.put(Constants.loginmsg, loginmsg);
+		}
+		return "bacontrolcenter/balogin";
 	}
 	
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="basignin.do")
@@ -41,16 +44,16 @@ public class BaLoginController {
 		if (loginuser != null) {
 			if (loginuser.getStatus().equals('0')) {
 				map.put(Constants.loginmsg, "您的账号已停用,如有疑问请联系管理员");
-				return "bacontrolcenter/login";
+				return "redirect:/balogin/gobalogin.do";
 			}
 			request.getSession().setAttribute(Constants.ADMIN_SESSION, loginuser);
 			log.warn("login successful √");
-			return "baceptionframe/bahomepage";
+			return "redirect:/mangerment/home.do";
 		}
 		
 		log.warn("logon failure ×");
 		map.put(Constants.loginmsg, "用户名或密码错误");
-		return "bacontrolcenter/balogin";
+		return "redirect:/balogin/gobalogin.do";
 	}
 	
 

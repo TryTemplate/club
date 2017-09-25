@@ -6,6 +6,6 @@ import com.club.web.model.HmMenuMainmenu;
 
 public interface HmMenuMainmenuService {
 	
-	List<HmMenuMainmenu> getMainMenu();
+	List<HmMenuMainmenu> getMainMenu(int type);
 
 }

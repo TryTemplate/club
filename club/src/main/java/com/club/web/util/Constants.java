@@ -26,7 +26,15 @@ public class Constants {
 
 	public static final String PARAMS = "params";
 	
-	public static final String version = "version";
+	public static String version;
 	
-	public static final String loginmsg = "loginmsg";
+	public static String loginmsg;
+
+	public static void setVersion(String version) {
+		Constants.version = version;
+	}
+
+	public static void setLoginmsg(String loginmsg) {
+		Constants.loginmsg = loginmsg;
+	}
 }

@@ -43,9 +43,6 @@ html {
 </head>
 <body>
 	#parse("receptionframe/homeallhead.vm")
-	<div style="padding-bottom: 5px;">
-		<a href="/balogin/gobalogin.do" style="" target="_blank">balogin</a>
-	</div>
 	<iframe src="http://cn.bing.com/" frameborder="0" style="min-height: 1000px"  scrolling="no" width="100%" name="contiframe" id="contiframe" onload="this.height=this.contentWindow.document.documentElement.scrollHeight" />
 
 <br><br>

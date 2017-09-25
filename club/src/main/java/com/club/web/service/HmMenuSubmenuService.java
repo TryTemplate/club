@@ -6,6 +6,6 @@ import com.club.web.model.HmMenuSubmenu;
 
 public interface HmMenuSubmenuService {
 	
-	List<HmMenuSubmenu> getSmenuByMid(Integer mid);
+	List<HmMenuSubmenu> getSmenuByMid(Integer mid, Integer type);
 
 }
