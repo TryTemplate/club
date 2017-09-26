@@ -119,19 +119,19 @@
 		</dependency>
 	
 		<!-- ******************************** Spring Security（页面权限控制） *********************************** -->
-	
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
-			<version>4.0.2.RELEASE</version>
-		</dependency>
-	
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-			<version>4.0.2.RELEASE</version>
-		</dependency>
-	
+		<!-- 
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>4.0.2.RELEASE</version>
+			</dependency>
+		
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>4.0.2.RELEASE</version>
+			</dependency>
+		 -->
 		<!-- Spring Security 框架核心类 -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>

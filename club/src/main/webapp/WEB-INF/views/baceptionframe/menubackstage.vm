@@ -1,0 +1,14 @@
+#foreach($!mm in $!mList)
+	<dl class="system_log">
+		
+			<dt onClick="changeImage()" url="$!mm.url" sr="$!mm.menuIcon" title="$!mm.remarks">$!mm.title<img src="/images/left/select_xl01.png"></dt>
+			
+			#foreach($!ms in $!mm.smenuList)
+				#if($!velocityCount == 1)
+					<dd title="$!ms.remarks" target="bacontiframe" class="first_dd"><a href="$!ms.url">$!ms.title</a></dd>
+				#else
+					<dd><a href="$!ms.url" target="bacontiframe" title="$!ms.remarks">$!ms.title</a></dd>
+				#end
+			#end
+	</dl>
+#end

@@ -43,7 +43,22 @@ public class BackstageManagementController {
 		map.put("mList", hmmList);
 		map.put("msg", "hello club !");
 
-		return "baceptionframe/bahomepage";
+		return "baceptionframe/index";
+	}
+	
+	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="menubackstage.do")
+	public String menuHomeBackstage(HttpServletRequest request, ModelMap map) {
+		
+		List<HmMenuMainmenu> hmmList = hmMenuMainmenuService.getMainMenu(2);
+		
+		for (HmMenuMainmenu hmMenuMainmenu : hmmList) {
+			hmMenuMainmenu.setSmenuList(hmMenuSubmenuService.getSmenuByMid(hmMenuMainmenu.getId(),2));
+		}
+		
+		map.put("mList", hmmList);
+		map.put("msg", "hello club !");
+
+		return "baceptionframe/menubackstage";
 	}
 	
 	

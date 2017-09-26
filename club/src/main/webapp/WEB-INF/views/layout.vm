@@ -16,12 +16,6 @@ eici Internet of Things
 <link rel="shortcut icon" href="/images/home/lens_72px_1180356_easyicon.net.ico" type="image/x-icon" />
 <link rel="shortcut icon" type="image/x-icon" href="/images/home/lens_72px_1180356_easyicon.net.ico"/>
 
-<link href="/css/flat-ui.css" rel="stylesheet"/>
-<link href="/css/bootstrap.css" rel="stylesheet"/>
-$!extraCss
-
-<link rel="stylesheet" type="text/css" href="/css/bootstrap-ie6.min.css">
-<link rel="stylesheet" type="text/css" href="/css/ie.css">
 
 <style>
 body{font-family:"simfang";}
@@ -33,13 +27,5 @@ body{font-family:"simfang";}
 	<script src="/js/layer/layer.js"></script>
 	$screen_content
 	$!extraJavaScript
-
-	<script type="text/javascript" src="/js/utils/bootstrap-ie.js"></script>
-	<script type="text/javascript" src="/js/config.js"></script>
-
-	
-	<script src="/js/utils/excanvas.compiled.js"></script>
-
-	<script type="text/javascript" src="/js/common.js"></script>
 </body>
 </html>
