@@ -26,7 +26,7 @@ public class SessionFilter extends OncePerRequestFilter {
 
 		boolean doFilter = true;
 		for (String s : notFilter) {
-			if (uri.indexOf(s) != -1) {
+			if (uri.equals(s)) {
 				doFilter = false;
 				break;
 			}

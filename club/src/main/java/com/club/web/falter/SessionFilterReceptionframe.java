@@ -17,7 +17,7 @@ public class SessionFilterReceptionframe extends OncePerRequestFilter {
 
 	private final static Logger LOG = LoggerFactory.getLogger(SessionFilterReceptionframe.class);
 	private static final String LOGIN_PAGE = "/login/gorelogin.htm";
-	String[] notFilter = new String[] { "/login/resignin.htm", "/home/homepage.htm" ,"/" ,LOGIN_PAGE};
+	String[] notFilter = new String[] { "/login/resignin.htm", "/home/homepage.htm", "/" ,LOGIN_PAGE};
 
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
@@ -26,7 +26,7 @@ public class SessionFilterReceptionframe extends OncePerRequestFilter {
 
 		boolean doFilter = true;
 		for (String s : notFilter) {
-			if (uri.indexOf(s) != -1) {
+			if (uri.equals(s)) {
 				doFilter = false;
 				break;
 			}
