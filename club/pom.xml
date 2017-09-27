@@ -117,21 +117,12 @@
 			<artifactId>spring-security-taglibs</artifactId>
 			<version>4.0.2.RELEASE</version>
 		</dependency>
-	
+
 		<!-- ******************************** Spring Security（页面权限控制） *********************************** -->
-		<!-- 
-			<dependency>
-				<groupId>org.springframework.security</groupId>
-				<artifactId>spring-security-web</artifactId>
-				<version>4.0.2.RELEASE</version>
-			</dependency>
-		
-			<dependency>
-				<groupId>org.springframework.security</groupId>
-				<artifactId>spring-security-config</artifactId>
-				<version>4.0.2.RELEASE</version>
-			</dependency>
-		 -->
+		<!-- <dependency> <groupId>org.springframework.security</groupId> <artifactId>spring-security-web</artifactId> 
+			<version>4.0.2.RELEASE</version> </dependency> <dependency> <groupId>org.springframework.security</groupId> 
+			<artifactId>spring-security-config</artifactId> <version>4.0.2.RELEASE</version> 
+			</dependency> -->
 		<!-- Spring Security 框架核心类 -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -290,8 +281,16 @@
 			<artifactId>mail</artifactId>
 			<version>1.4.7</version>
 		</dependency>
-		
-		
+
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.3</version>
+		</dependency>
+
+
+
 		<!-- velocity -->
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
@@ -322,7 +321,7 @@
 
 	<build>
 		<finalName>club-${applylocation.version}</finalName>
-		
+
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -332,14 +331,14 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
-			  <groupId>org.apache.maven.plugins</groupId>
-			  <artifactId>maven-war-plugin</artifactId>
-			  <version>2.3</version>
-			  <configuration>
-			   <warName>ROOT</warName>
-			  </configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<warName>ROOT</warName>
+				</configuration>
 			</plugin>
 		</plugins>
 
