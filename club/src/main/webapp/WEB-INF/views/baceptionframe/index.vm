@@ -89,7 +89,9 @@
             <!-- 菜单按钮 end -->
             
             <!-- Main Content -->
-			<iframe src="" frameborder="0" style="width: 100%;; overflow: hidden;min-hight: 1000px;" scrolling="no" width="100%" name="bacontiframe" id="bacontiframe" onload="this.height=this.contentWindow.document.documentElement.scrollHeight"></iframe>
+            <div id="iframediv" style="margin-left: 60px;margin-top: 60px;position: absolute;height: 94%;width: 94%;">
+				<iframe src="http://cn.bing.com/" frameborder="0" style="width: 100%;overflow: hidden;height: 100%;" scrolling="no" width="100%" name="bacontiframe" id="bacontiframe" onload="this.height=this.contentWindow.document.documentElement.scrollHeight"></iframe>
+            </div>
             <!-- Main Content -->
         </div>
 	</div>
