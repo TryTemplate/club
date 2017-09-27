@@ -7,7 +7,7 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:applicationContext.xml</param-value>
+		<param-value>classpath:*.xml</param-value>
 	</context-param>
 
 	<!-- spring监听器 -->
@@ -39,6 +39,10 @@
 		<servlet-name>springMvc</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>springMvc</servlet-name>
+		<url-pattern>*.api</url-pattern>
+	</servlet-mapping>
 
 	<!-- 字符集编码 utf-8 -->
 	<filter>
@@ -60,6 +64,10 @@
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.api</url-pattern>
 	</filter-mapping>
 
 	<!-- 在线状态监听-前台 -->
