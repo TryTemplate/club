@@ -64,5 +64,22 @@
 	<div class="footer">
 		<p>Eici club &copy; <script type="text/javascript">var myDate = new Date();document.write(myDate.getFullYear());</script>.</p>
 	</div>
+	
+	
+	<input id="loginuname" type="hidden" value="$!admin_session.userName">
+	<input id="loginuaccount" type="hidden" value="$!$!admin_session.userName.account">
 </body>
+
+
+<script type="text/javascript">
+
+//获取登录对象中的信息
+var loginuserun = $("#loginuname").val();
+var loginuserac = $("#loginuaccount").val();
+
+//如果对象不为空直接去首页
+if (loginuserun!="" && loginuserac!="") {
+	top.location.href="/mangerment/home.do";
+}
+</script>
 </html>

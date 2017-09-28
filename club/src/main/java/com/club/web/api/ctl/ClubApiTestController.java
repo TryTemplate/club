@@ -1,4 +1,4 @@
-package com.club.web.api;
+package com.club.web.api.ctl;
 
 import java.io.IOException;
 import java.util.List;
@@ -35,6 +35,8 @@ public class ClubApiTestController {
 		JSONObject res = new JSONObject();
 		
 		List<SysNewsContext> hotNews = sysNewsContextService.getHotNews();
+		
+		res.put("news_list", hotNews);
 		
 		res.put("hotNews", hotNews);
 		

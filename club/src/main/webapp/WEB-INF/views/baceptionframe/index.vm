@@ -74,27 +74,64 @@
             <!-- 菜单 end -->
             
             <!-- 菜单按钮 start -->
-            <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+            <nav class="navbar navbar-default navbar-fixed-top navbar-top" style="background-color: #4D889E;">
                 <div class="container-fluid">
-                    <div class="navbar-header">
+                    <div class="navbar-header" style="width: 100%">
                         <button type="button" class="navbar-expand-toggle">
                             <i class="fa fa-bars icon"></i>
                         </button>
                         <ol class="breadcrumb navbar-breadcrumb">
-                            <li class="active">System</li>
+                            <li>Club Intelligent System</li>
                         </ol>
+                		<div style="width: 50px;float: right;">aaaa</div>
                     </div>
                 </div>
             </nav>
             <!-- 菜单按钮 end -->
             
             <!-- Main Content -->
-            <div id="iframediv" style="margin-left: 60px;margin-top: 60px;position: absolute;height: 94%;width: 94%;">
-				<iframe src="http://cn.bing.com/" frameborder="0" style="width: 100%;overflow: hidden;height: 100%;" scrolling="no" width="100%" name="bacontiframe" id="bacontiframe" onload="this.height=this.contentWindow.document.documentElement.scrollHeight"></iframe>
-            </div>
-            <!-- Main Content -->
+
+			<iframe
+				src="/mangerment/contextdemopage.do"
+				frameborder="0" style="margin-left: 60px;margin-top: 60px;" scrolling="auto" 
+				name="bacontiframe" id="bacontiframe"></iframe>
+
+			<!-- Main Content -->
         </div>
 	</div>
+<script type="text/javascript">
+	$(document.body).css({
+	   "overflow-x":"hidden",
+	   "overflow-y":"hidden"
+	 });
+
+	var dbw = document.body.clientWidth;
+	var dbh = document.body.clientHeight;
+	var newwidth = dbw-60;
+	var newhight = dbh-60;
+	$("#bacontiframe").css("width",newwidth+"px");
+	$("#bacontiframe").css("height",newhight+"px");
+	
+	//iframe
+	function initIframeHeight(height) {
+		var userAgent = navigator.userAgent;
+		var iframe = parent.document.getElementById("bacontiframe");
+		var subdoc = iframe.contentDocument || iframe.contentWindow.document;
+		var subbody = subdoc.body;
+		var realHeight;
+		//谷歌浏览器特殊处理
+		if (userAgent.indexOf("Chrome") > -1) {
+			realHeight = subdoc.documentElement.scrollHeight;
+		} else {
+			realHeight = subbody.scrollHeight;
+		}
+		if (realHeight < height) {
+			$(iframe).height(height);
+		} else {
+			$(iframe).height(realHeight);
+		}
+	}
+</script>
 	
 	<!-- Javascript Libs -->
 	<script type="text/javascript" src="/js/backsageindex/js/jquery.min.js"></script>
@@ -110,7 +147,5 @@
 	<script type="text/javascript" src="/js/backsageindex/js/ace/theme-github.js"></script>
 	<!-- Javascript -->
 	<script type="text/javascript" src="/js/backsageindex/app.js"></script>
-	<script type="text/javascript" src="/js/backsageindex/index.js"></script>
 	</body>
-
 </html>

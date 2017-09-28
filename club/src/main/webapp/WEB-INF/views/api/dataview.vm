@@ -3,7 +3,7 @@
 
 <body>
 
-<form action="">
+<form action="/api/getdata.api">
 <textarea id="request" rows="" cols=""></textarea>
 
 </form>

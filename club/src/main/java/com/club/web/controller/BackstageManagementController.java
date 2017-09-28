@@ -46,6 +46,13 @@ public class BackstageManagementController {
 		return "baceptionframe/index";
 	}
 	
+	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="contextdemopage.do")
+	public String contextDemoPage(HttpServletRequest request, ModelMap map) {
+		
+		
+		return "baceptionframe/contextDemoPage";
+	}
+	
 	@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST },value="menubackstage.do")
 	public String menuHomeBackstage(HttpServletRequest request, ModelMap map) {
 		
