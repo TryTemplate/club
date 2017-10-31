@@ -3,7 +3,7 @@ $(function() {
 		var dbw = document.body.clientWidth;
 		if ($(this).attr("class") == "navbar-expand-toggle fa-rotate-90") {
 			var newwidth = dbw-60;
-			$("#bacontiframe").animate({
+			$("#bacontiframe","#butmview").animate({
 				width : newwidth+"px",
 				marginLeft : "60px"
 			},
@@ -15,7 +15,7 @@ $(function() {
 			$(".app-container").toggleClass("expanded");
 			
 			var newwidth = dbw-250;
-			$("#bacontiframe").animate({
+			$("#bacontiframe","#butmview").animate({
 				marginLeft : "250px",
 				width : newwidth+"px"
 			});
