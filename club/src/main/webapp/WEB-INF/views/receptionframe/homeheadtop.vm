@@ -45,7 +45,7 @@ html {
 	<div class="headhd">
 		
 		<a href="/home/homepage.htm" target="_top" title="首页">
-			<img src="/images/home/logo.gif"" alt="" style="height: 35px;" />
+			<img src="/images/home/logo.gif" alt="" style="height: 35px;" />
 		</a>
 		
 		<a href="/balogin/gobalogin.do" style="display: inline-block;text-align: center;width: 100px;height: 35px;line-height: 35px;" target="_blank">balogin</a>

@@ -64,12 +64,12 @@ table tr td:nth-child(2){
 		<a href="javascript:void(0);" class="butstylemenua" target="_top">菜单</a>
 		
 		#foreach($!mm in $!mList)
-			<a href="$!mm.url" class="butstylemenua" onmouseover="showthisdivm($!mm.id);" onmouseout="nonethisdivm($!mm.id);" title="$!mm.remarks" target="_top">$!mm.title</a>
+			<a href="http://$!mm.url" class="butstylemenua" onmouseover="showthisdivm($!mm.id);" onmouseout="nonethisdivm($!mm.id);" title="$!mm.remarks" target="_blank">$!mm.title</a>
 		#end
 		
 		#if(! $user_session.account)
 			<div style="float: right;text-align: center;width: 150px;height: 60px;line-height: 60px;">
-				<a href="/user/registered.htm" class="butstylear" style="float: right;" target="_top">注册</a>
+				<a href="/user/registered.htm" class="butstylear" style="float: right;" target="_blank">注册</a>
 			</div>
 		#else
 			<div id="uarv" style="float: right;text-align: center;height: 60px;line-height: 60px;">
