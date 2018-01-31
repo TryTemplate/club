@@ -35,8 +35,8 @@
                     <div class="side-menu-container">
                         <div class="navbar-header">
                             <a class="navbar-brand" href="#">
-                                <div class="icon"><img alt="" style="width: 35px;height: 35px;" src="/images/backstage_logo.png"></div>
-                                <div class="title">Intelligent System</div>
+                                <div class="icon"><img alt="" style="width: 35px;height: 35px;" src="/images/backstage_logo.ico"></div>
+                                <div class="title" style="padding-left: 15px;">Intelligent System</div>
                             </a>
                             <button type="button" class="navbar-expand-toggle pull-right visible-xs">
                                 <i class="fa fa-times icon"></i>
