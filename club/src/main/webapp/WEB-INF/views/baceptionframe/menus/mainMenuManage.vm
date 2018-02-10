@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<title>mainMenuManage</title>
+
+</head>
+
+<body>
+
+<center>
+
+<div style="margin: 100px;border:1px solid #CCC;padding: 100px;">
+
+	#foreach($!mm in $!menuList)
+	$!ms.title
+	<li class="panel-default dropdown">
+		<input type="text" id="url" value="$!ms.url">
+	</li>
+	<br><br>
+	#end
+	
+</div>
+
+</center>
+
+</body>
+</html>

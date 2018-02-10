@@ -14,6 +14,12 @@ public class HmMenuMainmenuServiceImpl implements HmMenuMainmenuService {
 	@Autowired
 	private HmMenuMainmenuMapper hmMenuMainmenuMapper;
 
+	/**
+	 * @author liujingguang
+	 * 
+	 *@param 1前台 2后台
+	 *@return List<HmMenuMainmenu>
+	 */
 	@Override
 	public List<HmMenuMainmenu> getMainMenu(int type){
 		return hmMenuMainmenuMapper.selectHomeViewMenu(type);
