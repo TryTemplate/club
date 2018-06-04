@@ -28,7 +28,7 @@
 			<input value="登录" style="width: 100%;" type="submit">
 		</form>
 		<br />
-		<a onClick="alert('请联系管理员')">忘记密码</a>
+		<a onClick="alert('敬请期待...')">忘记密码</a>
 	</div>
 	
 	
